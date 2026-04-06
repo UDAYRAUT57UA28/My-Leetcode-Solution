@@ -26,11 +26,9 @@ class MyCircularQueue {
     public boolean deQueue() {
         if (isEmpty()) return false;
         if (head == tail) {
-            // Queue becomes empty after this operation
             head = -1;
             tail = -1;
         } else {
-            // Move head forward circularly
             head = (head + 1) % k;
         }
         size--;
